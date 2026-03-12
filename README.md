@@ -20,7 +20,7 @@ Soy Licenciada en Sociología con una sólida trayectoria en el análisis de inf
 
 ## 📂 Proyectos Destacados
 
-### 1. Sistema de Recomendación - Plan Ceibal 🎓
+### 1. Sistema de Recomendación - Ceibal 🎓
 Desarrollo de un modelo híbrido para personalizar la oferta de formación docente en Uruguay.
 * **Problema:** Sobrecarga de opciones educativas; necesidad de optimizar las trayectorias formativas.
 * **Solución:** Implementación de un sistema de recomendación utilizando **LightFM**, integrando interacciones usuario-item y metadatos sociodemográficos.
