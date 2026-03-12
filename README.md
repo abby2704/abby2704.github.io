@@ -37,7 +37,7 @@ Análisis de la heterogeneidad de una base de clientes para optimizar estrategia
 * **Problema:** Ineficiencia en campañas genéricas que no capturan las necesidades específicas de distintos perfiles de compradores.
 * **Metodología:** Preprocesamiento de datos, Ingeniería de Características y Reducción de Dimensionalidad mediante **PCA**. Aplicación de **K-Means Clustering** para la definición de segmentos.
 * **Resultados:** Identificación de perfiles clave (ej: "Clientes de alto valor", "Cazadores de ofertas") basados en ingresos, hábitos de gasto y respuesta a campañas.
-* **Enlace:** [Ver Notebook de Segmentación](Learner_Notebook_Full_Code_Version_Customer_Personality_Segmentation (1).ipynb)
+* **Enlace:** [Ver Notebook de Segmentación](Learner_Notebook_Full_Code_Version_Customer_Personality_Segmentation%20(1).ipynb)
 
 ---
 
