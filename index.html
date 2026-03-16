@@ -3,84 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abril Ocampo | Data Science Portfolio</title>
+    <title>Abril Ocampo | Portfolio Ciencia de Datos 2025-2026</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --primary: #2c3e50;
+            --primary: #1a2a3a;
             --secondary: #3498db;
-            --accent: #e67e22;
-            --light: #f4f7f6;
-            --text: #333;
+            --accent: #27ae60;
+            --light: #f8f9fa;
+            --text: #2c3e50;
         }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text); background: var(--light); margin: 0; }
-        header { background: var(--primary); color: white; padding: 4rem 2rem; text-align: center; }
-        .container { max-width: 1000px; margin: auto; padding: 2rem; }
-        .profile-section { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-top: -3rem; position: relative; }
-        h1 { margin: 0; font-size: 2.5rem; }
-        .badge { background: var(--secondary); color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.9rem; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .card { background: white; padding: 1.5rem; border-radius: 10px; border-top: 5px solid var(--secondary); box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: transform 0.3s; }
-        .card:hover { transform: translateY(-5px); }
-        .card h3 { color: var(--primary); margin-top: 0; }
-        .btn { display: inline-block; background: var(--secondary); color: white; padding: 0.6rem 1.2rem; border-radius: 5px; text-decoration: none; margin-top: 1rem; font-weight: bold; }
-        .btn:hover { background: #2980b9; }
-        .tech-stack span { background: #eee; padding: 0.2rem 0.5rem; border-radius: 3px; font-size: 0.8rem; margin-right: 5px; }
-        footer { text-align: center; padding: 2rem; color: #777; font-size: 0.9rem; }
+        body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; color: var(--text); background: var(--light); margin: 0; }
+        header { background: var(--primary); color: white; padding: 5rem 2rem; text-align: center; clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+        .container { max-width: 1100px; margin: auto; padding: 2rem; }
+        .profile-section { background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-top: -5rem; position: relative; }
+        h1 { margin: 0; font-size: 2.8rem; letter-spacing: -1px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .card { background: white; padding: 2rem; border-radius: 12px; border-bottom: 4px solid var(--secondary); transition: all 0.3s ease; display: flex; flex-direction: column; justify-content: space-between; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .card h3 { color: var(--primary); margin-top: 0; border-left: 4px solid var(--secondary); padding-left: 10px; }
+        .btn { display: inline-block; background: var(--primary); color: white; padding: 0.8rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; margin-top: 1.5rem; }
+        .btn:hover { background: var(--secondary); }
+        .tags { margin-bottom: 1rem; }
+        .tags span { background: #eef2f7; color: #5d6d7e; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; margin-right: 5px; text-transform: uppercase; }
+        footer { text-align: center; padding: 4rem 2rem; background: #eee; color: #555; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Abril Ocampo</h1>
-    <p>Data Scientist | Especialista en Sociología Aplicada a Datos</p>
+    <p>Data Scientist | Especialista en Sociología y Análisis de Comportamiento</p>
 </header>
 
 <div class="container">
     <section class="profile-section">
-        <h2><i class="fas fa-user-graduate"></i> Sobre mí</h2>
-        <p>Egresada de la Especialización en Ciencia de Datos e IA (UTEC - MIT). Mi enfoque combina el análisis sociológico con modelos avanzados de Machine Learning para generar impacto social y de negocio.</p>
-        <div class="tech-stack">
-            <span>Python</span> <span>Scikit-Learn</span> <span>Pandas</span> <span>SQL</span> <span>Machine Learning</span>
+        <h2><i class="fas fa-briefcase"></i> Perfil Profesional 2025-2026</h2>
+        <p>Egresada de la Especialización en Ciencia de Datos e IA por UTEC y el MIT IDSS. Experta en el desarrollo de soluciones basadas en Machine Learning con un fuerte enfoque en impacto social, salud mental y comportamiento del consumidor.</p>
+        <div class="tags">
+            <span>Python</span> <span>PyTorch</span> <span>Scikit-Learn</span> <span>SQL</span> <span>Power BI</span>
         </div>
     </section>
 
-    <h2 style="margin-top: 3rem; text-align: center;">Proyectos de Especialización</h2>
-    
     <div class="grid">
         <div class="card">
-            <h3><i class="fas fa-brain"></i> Depresión Estudiantil</h3>
-            <p>Análisis multidimensional de factores de riesgo en salud mental mediante datos demográficos y académicos.</p>
-            <div class="tech-stack"><span>EDA</span> <span>Visualización</span> <span>Análisis Estadístico</span></div>
-            <a href="Etapa_I_Problemática.ipynb" class="btn">Ver Análisis</a>
+            <div>
+                <div class="tags"><span>Nuevo 2025</span><span>EDA</span></div>
+                <h3>Salud Mental Estudiantil</h3>
+                <p>Análisis multidimensional de factores de riesgo asociados a la depresión. Definición de métricas de calidad y preprocesamiento de grandes volúmenes de datos demográficos.</p>
+            </div>
+            <a href="PROYECTO_DEPRESION.ipynb" class="btn">Explorar Etapa I</a>
         </div>
 
         <div class="card">
-            <h3><i class="fas fa-lightbulb"></i> Sist. Recomendación Ceibal</h3>
-            <p>Modelo híbrido con LightFM para personalizar la oferta formativa docente en Uruguay.</p>
-            <div class="tech-stack"><span>LightFM</span> <span>Sist. Recomendación</span></div>
-            <a href="PROYECTO_CEIBAL.ipynb" class="btn">Explorar Notebook</a>
+            <div>
+                <div class="tags"><span>ML Híbrido</span><span>Recomendación</span></div>
+                <h3>Sistema de Recomendación - Ceibal</h3>
+                <p>Implementación de algoritmos de filtrado colaborativo con LightFM para la personalización de trayectorias docentes.</p>
+            </div>
+            <a href="PROYECTO_CEIBAL.ipynb" class="btn">Ver Algoritmo</a>
         </div>
 
         <div class="card">
-            <h3><i class="fas fa-users"></i> Segmentación de Clientes</h3>
-            <p>Identificación de perfiles de consumo mediante K-Means y reducción de dimensionalidad con PCA.</p>
-            <div class="tech-stack"><span>K-Means</span> <span>PCA</span> <span>Clusterización</span></div>
-            <a href="Learner_Notebook_Full_Code_Version_Customer_Personality_Segmentation (1).ipynb" class="btn">Ver Segmentación</a>
-        </div>
-
-        <div class="card">
-            <h3><i class="fas fa-chart-line"></i> Predicción de Leads</h3>
-            <p>Modelo de clasificación para predecir la conversión de clientes potenciales en EdTech.</p>
-            <div class="tech-stack"><span>Clasificación</span> <span>Supervisado</span></div>
-            <a href="Learner_Notebook_Full_Code_Version_Potential_Customers_Prediction (2).ipynb" class="btn">Ver Modelo</a>
+            <div>
+                <div class="tags"><span>K-Means</span><span>PCA</span></div>
+                <h3>Segmentación de Clientes</h3>
+                <p>Análisis de personalidad y hábitos de consumo mediante clustering. Reducción de dimensionalidad para perfiles accionables.</p>
+            </div>
+            <a href="Learner_Notebook_Full_Code_Version_Customer_Personality_Segmentation (1).ipynb" class="btn">Ver Clusters</a>
         </div>
     </div>
 </div>
 
 <footer>
-    <p>© 2024 Abril Ocampo - Portafolio de Ciencia de Datos</p>
-    <p><a href="https://linkedin.com/in/tu-perfil" style="color: var(--secondary);"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+    <p><strong>Abril Ocampo</strong> | Proyectos de Especialización Ciencia de Datos</p>
+    <p>© 2025 - 2026 Todos los derechos reservados.</p>
+    <div style="font-size: 1.5rem; margin-top: 1rem;">
+        <a href="https://linkedin.com/in/tu-perfil" style="color: var(--primary); margin: 0 10px;"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:abril.ocampo@estudiantes.utec.edu.uy" style="color: var(--primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+    </div>
 </footer>
 
 </body>
