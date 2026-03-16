@@ -6,7 +6,7 @@
 ---
 
 ## 👤 Sobre mí
-Soy Licenciada en Sociología con una sólida trayectoria en el análisis de información para la toma de decisiones en el ámbito público y educativo (Ceibal, Intendencia de Montevideo). Mi enfoque combina el rigor metodológico de las ciencias sociales con la potencia del aprendizaje automático para transformar datos en estrategias accionables.
+Soy Licenciada en Sociología con una sólida trayectoria en el análisis de información para la toma de decisiones en el ámbito público y educativo. Mi enfoque combina el rigor metodológico de las ciencias sociales con la potencia del aprendizaje automático para transformar datos en estrategias accionables.
 
 ---
 
@@ -20,7 +20,7 @@ Soy Licenciada en Sociología con una sólida trayectoria en el análisis de inf
 
 ## 📂 Proyectos Destacados
 
-### 1. Sistema de Recomendación - Ceibal 🎓
+### 1. Sistema de Recomendación para cursos de formación docente 🎓
 Desarrollo de un modelo híbrido para personalizar la oferta de formación docente en Uruguay.
 * **Problema:** Sobrecarga de opciones educativas; necesidad de optimizar las trayectorias formativas.
 * **Solución:** Implementación de un sistema de recomendación utilizando **LightFM**, integrando interacciones usuario-item y metadatos sociodemográficos.
