@@ -4,56 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Abril Ocampo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        /* Variables de colores y fuentes */
+        /* Variables de colores y fuentes (Modo Darkness / Neo) */
         :root {
-            --primary-color: #6366f1;
-            --secondary-color: #4f46e5;
-            --bg-color: #f8fafc;
-            --text-color: #1e293b;
-            --card-bg: #ffffff;
-            --tag-bg: #e2e8f0;
-            --tag-text: #475569;
+            --primary-color: #00ffcc; /* Cian Neón */
+            --secondary-color: #bd00ff; /* Violeta Neón */
+            --bg-color: #0a0a0c; /* Fondo oscuro profundo */
+            --text-color: #d1d5db; /* Texto claro */
+            --text-muted: #9ca3af;
+            --card-bg: #13141a; /* Fondo de tarjetas */
+            --tag-bg: rgba(0, 255, 204, 0.1);
+            --tag-text: #00ffcc;
+            --border-glow: rgba(0, 255, 204, 0.4);
+            --footer-bg: #111116; /* Fondo del footer slightly lighter */
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
 
         body {
+            font-family: 'Roboto', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
+            background-image: url('image_0.png'); /* IMAGNE DE FONDO */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
         }
 
         /* Cabecera y Sobre Mí */
         header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 4rem 2rem;
+            background: linear-gradient(180deg, rgba(19,20,26,0.8) 0%, rgba(10,10,12,0.95) 100%);
+            border-bottom: 1px solid rgba(0, 255, 204, 0.2);
+            padding: 5rem 2rem 3rem;
             text-align: center;
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-family: 'Fira Code', monospace;
+            font-size: 2.8rem;
+            color: white;
             margin-bottom: 1rem;
+            text-shadow: 0 0 10px var(--border-glow);
         }
 
         .about-me {
             max-width: 800px;
             margin: 0 auto;
             font-size: 1.1rem;
-            opacity: 0.9;
+            color: var(--text-muted);
         }
 
         /* Contenedor Principal */
         .container {
             max-width: 1200px;
             margin: 2rem auto;
-            padding: 0 1rem;
+            padding: 0 1.5rem;
         }
 
         /* Filtros Interactivos */
@@ -62,23 +74,27 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 1rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
 
         .filter-btn {
-            background-color: white;
-            border: 2px solid var(--primary-color);
+            background-color: rgba(10, 10, 12, 0.7);
+            border: 1px solid var(--primary-color);
             color: var(--primary-color);
-            padding: 0.5rem 1.5rem;
-            border-radius: 20px;
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px; /* Bordes más rectos estilo terminal */
             cursor: pointer;
-            font-weight: bold;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
             transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .filter-btn:hover, .filter-btn.active {
             background-color: var(--primary-color);
-            color: white;
+            color: var(--bg-color);
+            box-shadow: 0 0 15px var(--border-glow);
         }
 
         /* Cuadrícula de Proyectos */
@@ -90,72 +106,82 @@
 
         /* Tarjeta de Proyecto */
         .project-card {
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: rgba(19, 20, 26, 0.85); /* Semitransparente */
+            border: 1px solid #1f2937;
+            border-radius: 8px;
+            padding: 1.8rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 20px -5px rgba(0, 255, 204, 0.15);
         }
 
         .project-title {
-            font-size: 1.4rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
+            font-family: 'Fira Code', monospace;
+            font-size: 1.3rem;
+            color: white;
+            margin-bottom: 1rem;
         }
 
         .tags-container {
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
         }
 
         .tag {
             display: inline-block;
             background-color: var(--tag-bg);
             color: var(--tag-text);
-            font-size: 0.8rem;
-            padding: 0.3rem 0.8rem;
-            border-radius: 12px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.75rem;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
             margin-right: 0.5rem;
             margin-bottom: 0.5rem;
-            font-weight: 600;
+            border: 1px solid rgba(0, 255, 204, 0.3);
         }
 
         .project-section {
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
+            flex-grow: 1;
         }
 
         .project-section h4 {
-            font-size: 1rem;
-            color: var(--text-color);
-            margin-bottom: 0.3rem;
-            border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 0.2rem;
+            font-size: 0.95rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .project-section p {
             font-size: 0.95rem;
-            color: #475569;
+            color: var(--text-muted);
         }
 
         .btn-repo {
             display: block;
             text-align: center;
-            background-color: var(--primary-color);
-            color: white;
+            background-color: rgba(31, 41, 55, 0.5);
+            border: 1px solid var(--secondary-color);
+            color: var(--secondary-color);
             text-decoration: none;
             padding: 0.8rem;
-            border-radius: 8px;
-            margin-top: 1.5rem;
-            font-weight: bold;
-            transition: background 0.3s;
+            border-radius: 4px;
+            margin-top: auto;
+            font-family: 'Fira Code', monospace;
+            font-weight: 600;
+            transition: all 0.3s;
         }
 
         .btn-repo:hover {
             background-color: var(--secondary-color);
+            color: white;
+            box-shadow: 0 0 15px rgba(189, 0, 255, 0.4);
         }
 
         /* Ocultar proyectos filtrados */
@@ -166,19 +192,59 @@
         /* Footer */
         footer {
             text-align: center;
-            padding: 2rem;
-            background-color: var(--text-color);
+            padding: 3rem 2rem;
+            background-color: var(--footer-bg);
+            border-top: 1px solid #1f2937;
+            color: var(--text-muted);
+            margin-top: 4rem;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid var(--secondary-color);
+            transition: all 0.3s ease;
+            color: var(--secondary-color);
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary-color);
             color: white;
-            margin-top: 3rem;
+            box-shadow: 0 0 15px rgba(189, 0, 255, 0.4);
+        }
+
+        .social-links svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
         }
 
         /* Adaptabilidad para celulares pequeños */
         @media (max-width: 600px) {
-            header {
-                padding: 3rem 1rem;
-            }
             header h1 {
                 font-size: 2rem;
+            }
+            .filter-btn {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.8rem;
             }
         }
     </style>
@@ -186,115 +252,265 @@
 <body>
 
     <header>
-        <h1>Hola, soy Abril 👋</h1>
+        <h1>Hola, soy Abril <span style="color: var(--primary-color);">_</span></h1>
         <div class="about-me">
-            <p>Soy Licenciada en Sociología por la UdelaR y Especialista en Data Science e Inteligencia Artificial por UTEC-MIT. 
-            </p>  ¡Bienvenida/o a mi repositorio de proyectos! Aquí reúno el trabajo realizado durante la Especialización en Ciencia de Datos (UTEC - MIT IDSS), donde aplico herramientas estadísticas y de Machine Learning para resolver problemas complejos con impacto social y de negocio.</p>
+            <p>Soy Licenciada en Sociología por la UdelaR y Especialista en Data Science e Inteligencia Artificial por UTEC-MIT.</p>
+            <p>¡Bienvenida/o a mi repositorio de proyectos!</p>
         </div>
     </header>
 
     <div class="container">
         
         <div class="filters">
-            <button class="filter-btn active" onclick="filterProjects('all')">Todos</button>
-            <button class="filter-btn" onclick="filterProjects('agile')">Metodología Ágil</button>
-            <button class="filter-btn" onclick="filterProjects('scrum')">Scrum</button>
-            <button class="filter-btn" onclick="filterProjects('waterfall')">Cascada</button>
+            <button class="filter-btn active" onclick="filterProjects(event, 'all')">Todos</button>
+            <button class="filter-btn" onclick="filterProjects(event, 'data-analysis')">Data analysis</button>
+            <button class="filter-btn" onclick="filterProjects(event, 'machine-learning')">Machine Learning</button>
+            <button class="filter-btn" onclick="filterProjects(event, 'deep-learning')">Deep Learning</button>
+            <button class="filter-btn" onclick="filterProjects(event, 'recommendation-system')">Recommendation System</button>
+            <button class="filter-btn" onclick="filterProjects(event, 'random-forest')">Random Forest</button>
         </div>
 
         <div class="projects-grid" id="projects-container">
 
-            <article class="project-card" data-category="agile">
-                <h3 class="project-title">Sistema de Gestión de Tareas</h3>
+            <article class="project-card" data-category="data-analysis">
+                <h3 class="project-title">Análisis de depresión estudiantil</h3>
                 <div class="tags-container">
-                    <span class="tag">Agile</span>
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">HTML/CSS</span>
-                </div>
-                
-                <div class="project-section">
-                    <h4>Descripción</h4>
-                    <p>Una aplicación web para organizar tareas diarias, establecer prioridades y marcar objetivos cumplidos.</p>
-                </div>
-
-                <div class="project-section">
-                    <h4>Metodología</h4>
-                    <p>Desarrollo iterativo basado en principios <strong>Agile</strong>. Se realizaron entregas cortas cada semana para ir validando funcionalidades con usuarios de prueba.</p>
-                </div>
-
-                <div class="project-section">
-                    <h4>Resultados</h4>
-                    <p>Reducción del 30% en el tiempo de organización personal de los usuarios beta. Código limpio y altamente escalable.</p>
-                </div>
-
-                <a href="https://github.com/abby2704/nombre-del-repo-1" target="_blank" class="btn-repo">Ver en GitHub</a>
-            </article>
-
-            <article class="project-card" data-category="scrum">
-                <h3 class="project-title">E-commerce de Ropa</h3>
-                <div class="tags-container">
-                    <span class="tag">Scrum</span>
+                    <span class="tag">Data analysis</span>
                     <span class="tag">Python</span>
-                    <span class="tag">SQL</span>
+                    <span class="tag">Visualización</span>
                 </div>
                 
                 <div class="project-section">
                     <h4>Descripción</h4>
-                    <p>Backend para una tienda en línea, gestionando inventario, carrito de compras y registro de usuarios.</p>
+                    <p>Un estudio de caso que analiza los factores asociados a la depresión en estudiantes universitarios, utilizando técnicas de análisis de datos y visualización.</p>
                 </div>
 
                 <div class="project-section">
                     <h4>Metodología</h4>
-                    <p>Framework <strong>Scrum</strong>. Se trabajó con Sprints de 2 semanas, Daily stand-ups y reuniones de retrospectiva al finalizar cada ciclo.</p>
+                    <p>EDA, análisis exploratorio de datos, visualización de datos. Correlación entre variables y análisis de correspondencias múltiples.</p>
                 </div>
 
                 <div class="project-section">
                     <h4>Resultados</h4>
-                    <p>Lanzamiento exitoso del MVP en 4 Sprints. La base de datos soporta hasta 10,000 consultas concurrentes sin pérdida de rendimiento.</p>
+                    <p>Los resultados permiten identificar y caracterizar perfiles estudiantiles con mayor riesgo de depresión, integrando variables demográficas, académicas y conductuales.</p>
                 </div>
 
-                <a href="https://github.com/abby2704/nombre-del-repo-2" target="_blank" class="btn-repo">Ver en GitHub</a>
+                <a href="https://github.com/abby2704/abby2704.github.io/blob/main/Student_depression.ipynb" target="_blank" class="btn-repo">Ver en GitHub</a>
             </article>
 
-            <article class="project-card" data-category="waterfall">
-                <h3 class="project-title">Migración de Servidores</h3>
+            <article class="project-card" data-category="machine-learning">
+                <h3 class="project-title">Segmentación de Clientes</h3>
                 <div class="tags-container">
-                    <span class="tag">Cascada</span>
-                    <span class="tag">Linux</span>
-                    <span class="tag">Redes</span>
+                    <span class="tag">PCA</span>
+                    <span class="tag">KMeans</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Machine Learning</span>
                 </div>
                 
                 <div class="project-section">
                     <h4>Descripción</h4>
-                    <p>Planificación y ejecución de la migración de un servidor físico local a un entorno de nube.</p>
+                    <p>Implementación de un modelo de segmentación de clientes utilizando técnicas de machine learning para mejorar la personalización de la experiencia del usuario.</p>
                 </div>
 
                 <div class="project-section">
                     <h4>Metodología</h4>
-                    <p>Modelo tradicional en <strong>Cascada (Waterfall)</strong>, debido a los estrictos requerimientos de seguridad. Fases rígidas: Análisis, Diseño, Implementación y Pruebas.</p>
+                    <p>Modelo de machine learning no supervisado. Técnicas de reducción de dimensionalidad (PCA) y clustering (KMeans).</p>
                 </div>
 
                 <div class="project-section">
                     <h4>Resultados</h4>
-                    <p>Cero pérdida de datos y un tiempo de inactividad (downtime) menor a 2 horas durante la ventana de mantenimiento programada.</p>
+                    <p>Identificación de perfiles clave (ej: "Clientes de alto valor", "Cazadores de ofertas") basados en ingresos, hábitos de gasto y respuesta a campañas.</p>
                 </div>
 
-                <a href="https://github.com/abby2704/nombre-del-repo-3" target="_blank" class="btn-repo">Ver en GitHub</a>
+                <a href="https://github.com/abby2704/abby2704.github.io/blob/main/Learner_Notebook_Full_Code_Version_Customer_Personality_Segmentation%20(1).ipynb" target="_blank" class="btn-repo">Ver en GitHub</a>
+            </article>
+
+            <article class="project-card" data-category="machine-learning">
+                <h3 class="project-title">Predicción de Clientes Potenciales</h3>
+                <div class="tags-container">
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Decision tree</span>
+                    <span class="tag">Random forest</span>
+                    <span class="tag">Grid Search</span>
+                </div>
+                
+                <div class="project-section">
+                    <h4>Descripción</h4>
+                    <p>Desarrollo de un modelo de machine learning para predecir la probabilidad de que un cliente sea potencialmente interesado en un producto o servicio.</p>
+                </div>
+
+                <div class="project-section">
+                    <h4>Metodología</h4>
+                    <p>Modelo de machine learning supervisado. Técnicas de clasificación y regresión para predecir la probabilidad de interés del cliente.</p>
+                </div>
+
+                <div class="project-section">
+                    <h4>Resultados</h4>
+                    <p>Se identifican factores clave que influyen en la probabilidad de interés del cliente, como indicadores de engagement con la web de la tienda, ocupación y actividad reciente.</p>
+                </div>
+
+                <a href="https://github.com/abby2704/abby2704.github.io/blob/main/Learner_Notebook_Full_Code_Version_Potential_Customers_Prediction%20(2).ipynb" target="_blank" class="btn-repo">Ver en GitHub</a>
+            </article>
+
+            <article class="project-card" data-category="recommendation-system">
+                <h3 class="project-title">Recomendación Formación Docente</h3>
+                <div class="tags-container">
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Recommendation System</span>
+                </div>
+                
+                <div class="project-section">
+                    <h4>Descripción</h4>
+                    <p>Desarrollo de un modelo para recomendar trayectos de formación personalizados para docentes, basándose en su perfil, necesidades y experiencia previa.</p>
+                </div>
+
+                <div class="project-section">
+                    <h4>Metodología</h4>
+                    <p>Implementación de un sistema de recomendación utilizando LightFM, integrando interacciones usuario-item y metadatos sociodemográficos.</p>
+                </div>
+
+                <div class="project-section">
+                    <h4>Resultados</h4>
+                    <p>Creación de un modelo funcional capaz de sugerir cursos, optimizando el tiempo de búsqueda y mejorando la pertinencia del desarrollo profesional.</p>
+                </div>
+
+                <a href="https://github.com/abby2704/abby2704.github.io/blob/main/Recomendacion_formacion_docente.ipynb" target="_blank" class="btn-repo">Ver en GitHub</a>
+            </article>
+
+            <article class="project-card" data-category="recommendation-system">
+                <h3 class="project-title">Sistema de Recomendación - Amazon</h3>
+                <div class="tags-container">
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Recommendation System</span>
+                    <span class="tag">Collaborative Filtering</span>
+                </div>
+                
+                <div class="project-section">
+                    <h4>Descripción</h4>
+                    <p>Sistema de recomendación de productos electrónicos para mitigar la sobrecarga de información del consumidor, basado en un dataset de Amazon con más de 7 millones de reseñas.</p>
+                </div>
+
+                <div class="project-section">
+                    <h4>Metodología</h4>
+                    <p>Limpieza de datos estricta y desarrollo de un modelo base complementado con un Filtro Colaborativo Usuario-Usuario (KNNBasic) de Surprise, optimizado mediante GridSearchCV.</p>
+                </div>
+
+                <div class="project-section">
+                    <h4>Resultados</h4>
+                    <p>Despliegue de un modelo optimizado que supera significativamente el rendimiento del baseline, sugiriendo ítems de alta relevancia para el usuario.</p>
+                </div>
+
+                <a href="https://github.com/abby2704/abby2704.github.io/blob/main/Recommendation_Systems_Learner_Notebook_Full_Code_updated%20(2).ipynb" target="_blank" class="btn-repo">Ver en GitHub</a>
+            </article>
+
+            <article class="project-card" data-category="random-forest">
+                <h3 class="project-title">Análisis Predictivo en Upwork</h3>
+                <div class="tags-container">
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Random Forest</span>
+                    <span class="tag">Gradient Boosting</span>
+                </div>
+                
+                <div class="project-section">
+                    <h4>Descripción</h4>
+                    <p>Modelo predictivo para estimar la tarifa horaria promedio de freelancers en la plataforma Upwork, evaluando más de 60,000 registros para establecer precios competitivos.</p>
+                </div>
+
+                <div class="project-section">
+                    <h4>Metodología</h4>
+                    <p>Limpieza exhaustiva y Feature Engineering (como métricas de descripción y skills). Se entrenaron y evaluaron modelos de regresión avanzados para estimaciones precisas.</p>
+                </div>
+
+                <div class="project-section">
+                    <h4>Resultados</h4>
+                    <p>Identificación de la tarifa media ($26.06/h) y estructuración de un pipeline con Gradient Boosting y Random Forest que otorga proyecciones cuantificables por perfil.</p>
+                </div>
+
+                <a href="https://github.com/abby2704/abby2704.github.io/blob/main/FINAL_Upwork_freelancer_Project_training%20(1).ipynb" target="_blank" class="btn-repo">Ver en GitHub</a>
+            </article>
+
+            <article class="project-card" data-category="deep-learning">
+                <h3 class="project-title">Segmentación Dental Multi-Clase</h3>
+                <div class="tags-container">
+                    <span class="tag">Deep Learning</span>
+                    <span class="tag">Computer Vision</span>
+                    <span class="tag">U-Net</span>
+                    <span class="tag">Python</span>
+                </div>
+                
+                <div class="project-section">
+                    <h4>Descripción</h4>
+                    <p>Desarrollo de segmentación semántica multi-clase para cuantificar análisis dentales, identificando 32 clases de dientes individuales en radiografías panorámicas.</p>
+                </div>
+
+                <div class="project-section">
+                    <h4>Metodología</h4>
+                    <p>Procesamiento de 598 imágenes y >15,000 polígonos, redimensionadas a 128x128. Mapeo de 33 clases semánticas e implementación de una red neuronal U-Net.</p>
+                </div>
+
+                <div class="project-section">
+                    <h4>Resultados</h4>
+                    <p>Pipeline funcional evaluado con métricas robustas al desbalance (IoU, Dice). Se perfiló el dataset para aislar piezas dentales y reducir solapamientos o fugas de bordes.</p>
+                </div>
+
+                <a href="https://github.com/abby2704/abby2704.github.io/blob/main/Tooth%20segmentation%20(1).ipynb" target="_blank" class="btn-repo">Ver en GitHub</a>
+            </article>
+
+            <article class="project-card" data-category="deep-learning">
+                <h3 class="project-title">Detección de Campos en Facturas</h3>
+                <div class="tags-container">
+                    <span class="tag">Deep Learning</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Computer Vision</span>
+                    <span class="tag">U-Net</span>
+                    <span class="tag">OCR</span>
+                </div>
+                
+                <div class="project-section">
+                    <h4>Descripción</h4>
+                    <p>Pipeline end-to-end de segmentación y OCR para la extracción automatizada de campos clave (empresa, fecha, dirección, total) en 626 recibos (Dataset ICDAR-2019).</p>
+                </div>
+
+                <div class="project-section">
+                    <h4>Metodología</h4>
+                    <p>U-Net con encoder MobileNetV2 usando transfer learning (encoder congelado + fine-tuning). Generación de máscaras a 256x256 px y extracción final de texto mediante EasyOCR.</p>
+                </div>
+
+                <div class="project-section">
+                    <h4>Resultados</h4>
+                    <p>Segmentación efectiva frente al alto desbalance de fondo, logrando un flujo operativo exitoso integrado en una demo interactiva con Gradio.</p>
+                </div>
+
+                <a href="https://github.com/abby2704/abby2704.github.io/blob/main/invoice_field_detection%20(1).ipynb" target="_blank" class="btn-repo">Ver en GitHub</a>
             </article>
 
         </div>
     </div>
 
     <footer>
-        <p>© 2026 - Portfolio de Abby. Hecho con ❤️</p>
+        <div class="footer-content">
+            <p>sys.exit(0) // © 2026 - Abril Ocampo</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/abril-ocampo" target="_blank" title="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="https://github.com/abby2704" target="_blank" title="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+            </div>
+        </div>
     </footer>
 
     <script>
-        function filterProjects(category) {
+        function filterProjects(event, category) {
             // Actualizar botones visualmente
             const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+            event.currentTarget.classList.add('active'); // Corregido event.currentTarget
 
             // Filtrar las tarjetas
             const cards = document.querySelectorAll('.project-card');
